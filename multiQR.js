@@ -52,6 +52,7 @@ if (/groups/.test(window.location.href)) {
      if (navigator.msSaveOrOpenBlob ) navigator.msSaveOrOpenBlob( blob, 'Society_QRs.html'); // IE10-11
          else link.click();  // other browsers
      document.body.removeChild(link);
+      $(".club-container").load("group_type=&group_cat=&search=");
    };
 
 }
