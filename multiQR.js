@@ -1,24 +1,5 @@
 if (/groups/.test(window.location.href)) {
 
-
-  let $showAllSocieties = $('<div class="padless-container btnSocieties">'+'<input type="button" value="Show All Societies" id="showAllSocieties" />'+'</div>');
-      $showAllSocieties.appendTo($("#right-content > h1"));
-
-  let $multiGenQRs = $('<div class="padless-container btnSocieties">'+'<input type="button" value="Generate QRs (A3, Multiple)" id="multiGenQRs" />'+'</div>');
-      $multiGenQRs.appendTo($("#right-content > h1"));
-
-  $('body').on('click', '#showAllSocieties', function(){
-      alert('This process will take (on average) 2 minutes'); 
-      showAllSocieties();
-  });
-
-  $('body').on('click', '#multiGenQRs', function(){
-      alert('Generating');
-      linkAllSocieties();
-      var css = ("<style>" + "@media print, screen {#socqr > p.group-details {opacity: 0;}#socqr > img {width: auto;max-width: 300px;height: auto;position: absolute;max-height: 300px;min-height:  300px;min-width:  300px;top: 350px;left: -25px;}#socqr > div.group-name {font-size: 7em;}.group-list {width: 1191px;}#socqr > p:nth-child(4) {position: absolute;font-size: 2em;width: 1191px;}#socqr > canvas {position:absolute;width: 725;height: 725;left: 375px;top: 235px;}.uc-load-more-groups{ display:none; }}" + "@media screen, print { .group-box {min-height: 1024px;} #socqr > p {font-size:2em;position: absolute;} #socqr > img {left: 40px;border-width: 0px;border-radius: 0px;}}" + "</style>");
-      exportDocument($('.club-container').html(), css);
-  });
-
   function showAllSocieties() {
     for (i = 0; i < 35; i++) {
       $( "#uc-more-group-search > a" ).trigger( "click" );
