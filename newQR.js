@@ -1,5 +1,5 @@
 if (/groups/.test(window.location.href)) {
-
+	 console.log('qr init');
 	 $('<div id="GQR"> </div>').appendTo($("#right-content > h1"));
 
 	  let $showAllSocieties = $('<div class="btnSocieties">'+'<input type="button" value="Show All Societies" id="showAllSocieties" />'+'</div>');
